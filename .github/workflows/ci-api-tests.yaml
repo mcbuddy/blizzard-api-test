@@ -1,0 +1,18 @@
+
+name: Continuous Integration for the api-tests
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup Ruby
+        uses: ruby/setup-ruby@359bebbc29cbe6c87da6bc9ea3bc930432750108
+        with:
+          ruby-version: 2.7.4
+    - name: Bundle Install
+      run: |
+        gem install bundler
+        bundle install
+    - name: Run All the tests
+      run: bundle exec rake run:all_tests
