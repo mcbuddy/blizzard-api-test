@@ -21,8 +21,7 @@ This testing framework build using Ruby and RSpec as the test runner and validat
     ├── README.md
     └── Rakefile
 
-#### Setup
-#### Install programs to Unix-based Machine
+#### Setup and Install programs to Unix-based Machine
 Prerequisite:
 - [rvm](https://rvm.io/rvm/install) - Ruby Version Manager
 - ruby equal or higher than version: 2.7.4
@@ -40,7 +39,6 @@ gem install bundler
 bundle install
 ```
 
-To run all the test suites just type `rake` in the command-line/terminal
 Here is the list of the commands that available on this project:
 ```
 $> rake -T
@@ -49,3 +47,23 @@ rake run:diablo3      # Run Diablo 3 Community API Test
 rake run:hearthstone  # Run HearthStone Game Data API Test
 rake show:all         # Showing all the task or rake -T
 ```
+
+#### Caveat 
+In the ideal world, to run all the test suites just type `rake` in the command-line/terminal, 
+Unfortunately this will be failed due to `$CLIENT_ID` and `$CLIENT_SECRET` are required to run this test. 
+
+For security reason I will not push these keys into public github repo, but I will send it along aside with the assessment submission via email
+
+So after those keys acquired, to run the tests will be looks like this: 
+```
+CLIENT_ID=$CLIENT_ID CLIENT_SECRET=$CLIENT_SECRET rake                  # Run all the tests
+CLIENT_ID=$CLIENT_ID CLIENT_SECRET=$CLIENT_SECRET rake run:diablo3      # Run Diablo 3 Community API Test
+CLIENT_ID=$CLIENT_ID CLIENT_SECRET=$CLIENT_SECRET rake run:hearthstone  # Run HearthStone Game Data API Test
+```
+
+#### Github Action CI Build
+The CI Build included and basically it will run all the test for each push and pull-request. 
+Feel free to acess and check that out, Click the Github Action badge on this README file or this [link](https://github.com/mcbuddy/mntn_assessment/actions/workflows/ci-api-tests.yaml) 
+
+
+ > *Feel free to ask/send me any questions or concerns to my email: budisugianto777@gmail.com*
