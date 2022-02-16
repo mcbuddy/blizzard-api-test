@@ -15,4 +15,7 @@ jobs:
         gem install bundler
         bundle install
     - name: Run All the tests
-      run: bundle exec rake run:all_tests
+      run: |
+        CLIENT_ID=${{ secrets.CLIENT_ID }} \
+        CLIENT_SECRET=${{ secrets.CLIENT_SECRET }} \
+        bundle exec rake run:all_tests
