@@ -1,7 +1,7 @@
 # MNTN  Assessment
 created by: Budi Sugianto
 
-github-action status: 
+Github Action: [![CI Status](https://github.com/mcbuddy/mntn_assessment/blob/main/.github/workflows/ci-api-tests.yaml/badge.svg)](https://github.com/mcbuddy/mntn_assessment/blob/main/.github/workflows/ci-api-tests.yaml)
 
 For this assessment, I decided to do something fun by using battle.net public API. The test simply to validate 2 of the games data: Diablo 3 and HearthStone.
 This testing framework build using Ruby and RSpec as the test runner and validator.
