@@ -1,15 +1,14 @@
-# MNTN  Assessment
+# Blizzard Public API Test
 created by: Budi Sugianto
 
-Github Action: [![ci-api-tests](https://github.com/mcbuddy/mntn_assessment/actions/workflows/ci-api-tests.yaml/badge.svg)](https://github.com/mcbuddy/mntn_assessment/actions/workflows/ci-api-tests.yaml)
+Github Action: [![ci-api-tests](https://github.com/mcbuddy/blizzard-api-test/actions/workflows/ci-api-tests.yaml/badge.svg)](https://github.com/mcbuddy/blizzard-api-test/actions/workflows/ci-api-tests.yaml)
 
-For this assessment, I decided to do something fun by using battle.net public API. The test simply to validate 2 of the games data: Diablo 3 and HearthStone.
-This testing framework build using Ruby and RSpec as the test runner and validator.
+The test simply to validate 2 of the games data: Diablo 3 and HearthStone. This testing framework build using Ruby and RSpec as the test runner and validator.
 
 
 #### Project Structure
 
-    mntn-assesment
+    blizzard-api-test
     ├─> .github/
     │   └─> workflows/              # Github Actions workflows 
     ├─> specs/
@@ -63,7 +62,7 @@ CLIENT_ID=$CLIENT_ID CLIENT_SECRET=$CLIENT_SECRET rake run:hearthstone  # Run He
 
 #### Github Action CI Build
 The CI Build included and basically it will run all the test for each push and pull-request. 
-Feel free to acess and check that out, Click the Github Action badge on this README file or this [link](https://github.com/mcbuddy/mntn_assessment/actions/workflows/ci-api-tests.yaml) 
+Feel free to acess and check that out, Click the Github Action badge on this README file or this [link](https://github.com/mcbuddy/blizzard-api-test//actions/workflows/ci-api-tests.yaml) 
 
 
  > *Feel free to ask/send me any questions or concerns to my email: budisugianto777@gmail.com*
